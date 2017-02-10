@@ -5,18 +5,26 @@
   "author": {
     "name": "Gabriel Cueto <@Mushr00m_Dev>",
     "email": "funji_2302@outlook.es",
-    "url": "http://www.laesporadelhongo.com/"
+    "url": "https://github.com/TheMushrr00m"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/TheMushrr00m/cordovue"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/TheMushrr00m/cordovue/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/TheMushrr00m/cordovue",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template",
+    "vue.js",
+    "webpack",
+    "hot-reload"
+  ],
   "cordova": {
     "id": "cordovue",
     "platforms": [
