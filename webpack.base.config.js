@@ -11,10 +11,9 @@ module.exports = {
   devtool: isProd
     ? false
     : '#cheap-module-source-map',
-  entry: './www/src/main.js',
   output: {
     path: path.resolve(__dirname, './www/dist'),
-    publicPath: isProd ? '/www/dist' : '/dist',
+    publicPath: '/www/dist',
     filename: 'build.js'
   },
   resolve: {
@@ -65,9 +64,6 @@ module.exports = {
         }),
         new ExtractTextPlugin({
           filename: 'common.[chunkhash].css'
-        }),
-        new webpack.LoaderOptionsPlugin({
-          minimize: true
         })
       ]
     : [
