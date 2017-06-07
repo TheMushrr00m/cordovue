@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const vueConfig = require('./vue-loader.config')
 const autoprefixer = require('autoprefixer');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -11,10 +11,9 @@ module.exports = {
   devtool: isProd
     ? false
     : '#cheap-module-source-map',
-  entry: './www/src/main.js',
   output: {
     path: path.resolve(__dirname, './www/dist'),
-    publicPath: isProd ? '/www/dist' : '/dist',
+    publicPath: '/www/dist',
     filename: 'build.js'
   },
   resolve: {
@@ -45,12 +44,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: /* isProd
+        use: isProd
           ? ExtractTextPlugin.extract({
               use: 'css-loader?minimize',
               fallback: 'vue-style-loader'
             })
-          : */ ['vue-style-loader', 'css-loader']
+          : ['vue-style-loader', 'css-loader']
       }
     ]
   },
@@ -63,12 +62,9 @@ module.exports = {
         new webpack.optimize.UglifyJsPlugin({
           compress: { warnings: false }
         }),
-        /* new ExtractTextPlugin({
+        new ExtractTextPlugin({
           filename: 'common.[chunkhash].css'
-        }), */
-        /*new webpack.LoaderOptionsPlugin({
-          minimize: true
-        })*/
+        })
       ]
     : [
         new FriendlyErrorsPlugin()
