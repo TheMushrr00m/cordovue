@@ -41,7 +41,6 @@
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
         "android": "cordova run android",
         "ios": "cordova run ios",
-        "prepare": "cordova platform add",
         "serve": "cordova serve --port 8080"
     },
     "engine": "node >= 6.0.0",
