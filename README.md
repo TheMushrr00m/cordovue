@@ -11,7 +11,7 @@ To use this you'll need Node.js v6 or newer.
 ### Installation
 ***via Github***
 ``` bash
-$ git clone https://github.com/eugenioclrc/cordovue.git MyAwesomeApp
+$ git clone https://github.com/TheMushrr00m/cordovue.git MyAwesomeApp
 $ cd MyAwesomeApp
 $ yarn install
 $ yarn run build
