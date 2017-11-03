@@ -31,6 +31,9 @@ Then, you can open the app in your browser by visiting [localhost:8888](http://l
 - `yarn run compile [ ios | android ]`: Build the app for the specified platform. Example (`yarn run compile -- ios`). (Coming soon).
 - `yarn run clean`: Clean the `platforms/` and `dist/` folders. (Coming soon)
 
+### Tutorials
+[Presenting Cordovue - Spanish](http://laesporadelhongo.com/cordovue/)
+
 ### TO-DO
 - Add test support.
 - Linting maybe.
