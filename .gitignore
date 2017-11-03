@@ -2,3 +2,4 @@
 node_modules
 npm-debug.log
 www/dist/build.*
+.idea
