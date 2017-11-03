@@ -1,11 +1,8 @@
 {
   "presets": [
-    ["es2015", {
-      "modules": false,
-      "loose": true
-    }],
-    "stage-2"
+    ["env", {
+      "es2015": { "modules": false }
+    }]
   ],
-  "plugins": ["transform-runtime", "syntax-dynamic-import"],
   "comments": false
 }

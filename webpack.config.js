@@ -36,6 +36,12 @@ module.exports = {
         options: vueConfig
       },
       {
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules)/
+      },
+      {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'url-loader',
         options: {
@@ -74,3 +80,4 @@ module.exports = {
         new FriendlyErrorsPlugin()
       ]
 }
+
